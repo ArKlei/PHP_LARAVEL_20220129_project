@@ -21,7 +21,7 @@ title(string)
 excerpt(text)
 description(longtext)
 author(text)
-5. Sukurti modelį "AuthorImage"
+5. Sukurti modelį "ArticleImage"
 id
 alt(string)
 src(string)
@@ -47,13 +47,13 @@ class(string)
 10. Paleisti npm install ("npm install downloads a package and it's dependencies. npm install can be run with or without arguments. When run without arguments, npm install downloads dependencies defined in a package. json file and generates a node_modules folder with the installed modules. / NPM is used to manage dependencies for packages. If you were to unpack a framework and use it outside NPM, you would have to do this every time you want to update the framework. NPM does this for you. You always know what version you're on, and you can limit a dependency to a specific major/minor/patch version. / The name npm (Node Package Manager) stems from when npm first was created as a package manager for Node. js. All npm packages are defined in files called package. json. The content of package.")
 11. Paleisti npm run dev ("run : It is a command native to npm. More information here. Keep in mind this is an aliases to the original command run-script . dev and prod : They're user defined. dev : Used for running the specific commands for serving the project, to any server, to live")
 12. Esant klaidoms (pabėgęs app dizainas) - ištrinti bylą package-lock.json, package.json pakeisti 23 eilutėje versiją iš "7" į "8", ištrinti "node_modules" direktoriją ir vėl paleisti "npm i" bei "npm run dev" ĮRAŠYTI Į GITHUB - SU COMMIT KĄ ATLIKAU
-13. Sukurti modelį: php artisan make:model AuthorImage --all
+13. Sukurti modelį: php artisan make:model ArticleImage --all
 14. Sukurti modelį: php artisan make:model Article --all
 15. Sukurti modelį: php artisan make:model ArticleCategory --all
 16. Pasitikrinti ar "App>Http>Controllers" aplanke susikūrė PavadinimasController.php ir App>Models atsirado modelis Pavadinimas.php?
 17. Patikriname ar "App>Database>migrations" aplanke atsirado Metai_menuo_diena_numeris_create_pavadinimas(daugiskaita)_table.php failas? Kiekvienam modeliui! ĮRAŠYTI Į GITHUB - SU COMMIT KĄ ATLIKAU
 18. Numatyti modelių/Objektų savybių rinkinius ir ryšius tarp jų web.php route suformavimui ir migracijos eiliškumui parinkti.
 19. Sukurti modelio/objekto "ArticleCategory" savybes/DB duomenų tipus: id, title(string), description(longtext) ir article_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su Article per article_id > id (kategorija gali tūrėti daug straipsnių, bet klausimas dėl hasMany taikymo atgal - straipsnis gali priklausyti kelioms kategorijoms: sportas ir aktualijos)
-20. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su AuthorImage per author_image_id > id (gali turėti kelis autorius)
-21. Sukurti modelio/objekto "AuthorImage" savybes/DB duomenų tipus: id, alt(string), src(string), width(string), height(string), class(string) bei ryšį hasMany su Article per id > author_image_id (neaišku ar daryti hasMany atgal? gali turėti kelis straipsnius tas pats autorius)
+20. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su ArticleImage per article_image_id > id (gali turėti kelis autorius)
+21. Sukurti modelio/objekto "ArticleImage" savybes/DB duomenų tipus: id, alt(string), src(string), width(string), height(string), class(string) 
 Sutvarkyti migracijas: savybes ir migracijų eiliškumą DB lentelių sukūrimui: AuthorImage > Article
