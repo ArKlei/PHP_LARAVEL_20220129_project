@@ -52,5 +52,6 @@ class(string)
 15. Sukurti modelį: php artisan make:model ArticleCategory --all
 16. Numatyti modelių/Objektų savybių rinkinius ir ryšius tarp jų web.php route suformavimui ir migracijos eiliškumui parinkti.
 17. Sukurti modelio/objekto "ArticleCategory" savybes/DB duomenų tipus: id, title(string), description(longtext) ir article_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su Article per article_id > id
-18. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/belongsTo tipus su AuthorImage per author_image_id > id + ryšį hasMany su ArticleCategory
-19. 
+18. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/belongsTo tipus su AuthorImage per author_image_id > id
+19. Sukurti modelio/objekto "AuthorImage" savybes/DB duomenų tipus: id, alt(string), src(string), width(string), height(string), class(string) bei ryšį hasMany su Article per id > author_image_id
+20. 
