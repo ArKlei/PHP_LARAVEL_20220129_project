@@ -1,6 +1,6 @@
 # PHP_LARAVEL_20220129_project
 
-******************* Užduotis **********************
+******************* Užduotis: **********************
 
 2022-01-29 Laravel užduotis
 Due tomorrow at 11:59 PM
