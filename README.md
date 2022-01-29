@@ -28,7 +28,7 @@ src(string)
 width(string)
 height(string)
 class(string)
-6. Tarp modelių savo nuožiūrą sudaryti ryšį: ArticleCategory gali turėti daug Article, vienam Article galim parinkti vieną AuthorImage.
+6. Tarp modelių savo nuožiūrą sudaryti ryšį: ArticleCategory gali turėti daug Article, vienam Article galim parinkti vieną ArticleImage.
 7. Visiems modeliams sukurti pilnas CRUD operacijas.
 8. ArticleImage modeliui, kuriant CRUD operacijas pritaikyti paveiksliuko įkėlimo kodą.
 9. Visiems puslapiams pritaikyti autentifikacijos modulio dizainą.
