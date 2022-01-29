@@ -28,10 +28,10 @@ src(string)
 width(string)
 height(string)
 class(string)
-6. Tarp modelių savo nuožiūrą sudaryti ryšį: ArticleCategory gali turėti daug Article, vienam Article galim parinkti vieną ArticleImage.
+6. Tarp modelių savo nuožiūrą sudaryti ryšį: ArticleCategory gali turėti daug Article, vienam Article galim parinkti vieną AuthorImage.
 7. Visiems modeliams sukurti pilnas CRUD operacijas.
 8. ArticleImage modeliui, kuriant CRUD operacijas pritaikyti paveiksliuko įkėlimo kodą.
-9. Vsiems puslapiams pritaikyti autentifikacijos modulio dizainą.
+9. Visiems puslapiams pritaikyti autentifikacijos modulio dizainą.
 
 ******************* CRUD kūrimas: *******************
   
@@ -49,5 +49,8 @@ class(string)
 12. Esant klaidoms (pabėgęs app dizainas) - ištrinti bylą package-lock.json, package.json pakeisti 23 eilutėje versiją iš "7" į "8", ištrinti "node_modules" direktoriją ir vėl paleisti "npm i" bei "npm run dev"
 13. Sukurti modelį: php artisan make:model AuthorImage --all
 14. Sukurti modelį: php artisan make:model Article --all
-15. Sukurti modelį: php artisan make:model AuthorImage --all
+15. Sukurti modelį: php artisan make:model ArticleCategory --all
 16. Numatyti modelių/Objektų savybių rinkinius ir ryšius tarp jų web.php route suformavimui ir migracijos eiliškumui parinkti.
+17. Sukurti modelio/objekto "ArticleCategory" savybes/DB duomenų tipus: id, title(string), description(longtext) ir article_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su Article per article_id > id
+18. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/belongsTo tipus su AuthorImage per author_image_id > id + ryšį hasMany su ArticleCategory
+19. 
