@@ -56,4 +56,4 @@ class(string)
 19. Sukurti modelio/objekto "ArticleCategory" savybes/DB duomenų tipus: id, title(string), description(longtext) ir article_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su Article per article_id > id (kategorija gali tūrėti daug straipsnių, bet klausimas dėl hasMany taikymo atgal - straipsnis gali priklausyti kelioms kategorijoms: sportas ir aktualijos)
 20. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir author_image_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su ArticleImage per article_image_id > id (gali turėti kelis autorius)
 21. Sukurti modelio/objekto "ArticleImage" savybes/DB duomenų tipus: id, alt(string), src(string), width(string), height(string), class(string) 
-Sutvarkyti migracijas: savybes ir migracijų eiliškumą DB lentelių sukūrimui: AuthorImage > Article
+Sutvarkyti migracijas: savybes ir migracijų eiliškumą DB lentelių sukūrimui: ArticleImage > Article > ArticleCategory
