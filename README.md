@@ -57,3 +57,6 @@ class(string)
 20. Sukurti modelio/objekto "Article" savybes/DB duomenų tipus: id, title(string), excerpt(text), description(longtext), author(text) ir article_image_id(unsignedBigInteger) bei ryšį foreign/hasMany tipus su ArticleImage per article_image_id > id (gali turėti kelis autorius)
 21. Sukurti modelio/objekto "ArticleImage" savybes/DB duomenų tipus: id, alt(string), src(string), width(string), height(string), class(string) 
 Sutvarkyti migracijas: savybes ir migracijų eiliškumą DB lentelių sukūrimui: ArticleImage > Article > ArticleCategory
+22.Paleisti "php artisan migrate:fresh", prieš tai įsitikinus ar aplamai paleistas xampp!. Per PhPMyAdmin, duombazės lentelėse per "Structure" galima pamatyti kas įsirašė: "ženklų apribojimas, unsigned, kt...
+23. Patikrinti kokia eilės tvarka migracijos bylų: pirma - mažiausia (articleImage), poto vidurinė (Articles) ir paskutinė/apatinė sąraše (ArticleCategory)
+24.Per PhPMyAdmin patikrinti ar duomenų bazės (projekto pavadinimas) lentelės (pavadinimai atitinka sukurtus modelius) atsirado stulpeliai su užduotais pavadinimais ir duomenų tipais "Schema" metode. ĮRAŠYTI Į GITHUB - SU COMMIT KĄ ATLIKAU
