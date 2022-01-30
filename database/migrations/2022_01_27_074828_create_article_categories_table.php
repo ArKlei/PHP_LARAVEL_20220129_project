@@ -15,6 +15,10 @@ class CreateArticleCategoriesTable extends Migration
     {
         Schema::create('article_categories', function (Blueprint $table) {
             $table->id();
+
+            $table->string('title');
+            $table->longText('description');
+
             $table->timestamps();
         });
     }
@@ -29,3 +33,4 @@ class CreateArticleCategoriesTable extends Migration
         Schema::dropIfExists('article_categories');
     }
 }
+

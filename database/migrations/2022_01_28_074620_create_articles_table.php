@@ -15,6 +15,14 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+
+            $table->string('title');
+            $table->text('excerpt');
+            $table->longText('description');
+            $table->text('author');
+            $table->unsignedBigInteger('article_category_id');
+            $table->foreign('article_category_id')->references('id')->on('article_categories');
+
             $table->timestamps();
         });
     }
@@ -29,3 +37,4 @@ class CreateArticlesTable extends Migration
         Schema::dropIfExists('articles');
     }
 }
+
