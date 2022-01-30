@@ -14,7 +14,15 @@ class ArticleImageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'alt' => $this->faker->sentence(),
+            'src' => 'localAddress',
+            'width' => rand(50,300),
+            'height' => rand(50,300),
+            'class' => 'Image',
+            'article_id' =>rand(1,10),
         ];
     }
 }
+
+
+

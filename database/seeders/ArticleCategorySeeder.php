@@ -4,6 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use App\Models\Article;
+use App\Models\ArticleImage;
+use App\Models\ArticleCategory;
+
 class ArticleCategorySeeder extends Seeder
 {
     /**
@@ -13,6 +17,6 @@ class ArticleCategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        ArticleCategory::factory()->count(5)->create();
     }
 }
