@@ -1,23 +1,19 @@
 @extends('layouts.app')
 
+<div id="mySidenav" class="sidenav">
+<a href="{{route('article.index')}}" id="article">Articles</a>
+  <a href="{{route('article.create')}}" id="create_article">Add article</a>
+  <a href="{{route('article_category.index')}}" id="article_category">Article categories</a>
+  <a href="{{route('article_category.create')}}" id="create_article_category">Add article category</a>
+</div>
+
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+        <p><div class="text-center"><img src="https://bit.lt/wp-content/themes/bit/assets/img/_bit-intro.jpg" class="rounded" style="width:500px; height:auto"></div>
+        <p>
+          <div class="text-center text-dark" style="font-size:100px">BIT Student project "Articles"</div>
+        <p>
+        <div class="text-center text-dark" style="font-size:50px">Made by BIT alumni</div>
         </div>
-    </div>
-</div>
 @endsection
