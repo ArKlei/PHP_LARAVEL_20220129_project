@@ -66,10 +66,11 @@ class ArticleController extends Controller
     {
         $article = new Article;
 
-        $article->name = $request->article_name;
-        $article->surname = $request->article_surname;
-        $article->group_id = $request->article_group_id;
-        $article->image_url = $request->article_image_url;
+        $article->title = $request->article_title;
+        $article->excerpt = $request->article_excerpt;
+        $article->description = $request->article_description;
+        $article->author = $request->article_author;
+        $article->category_id = $request->article_category_id;
         
         $article->save();
 
@@ -115,10 +116,11 @@ class ArticleController extends Controller
     {
         //pasiimu is lauku, ir irasau i duomenu baze
 
-        $article->name = $request->article_name;
-        $article->surname = $request->article_surname;
-        $article->group_id = $request->article_group_id;
-        $article->image_url = $request->article_image_url;
+        $article->title = $request->article_title;
+        $article->excerpt = $request->article_excerpt;
+        $article->description = $request->article_description;
+        $article->author = $request->article_author;
+        $article->category_id = $request->article_category_id;
 
         $article->save();//UPDATE
 
