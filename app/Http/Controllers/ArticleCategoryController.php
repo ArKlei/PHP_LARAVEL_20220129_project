@@ -32,7 +32,7 @@ class ArticleCategoryController extends Controller
         $article_images= ArticleImage::all();
         $articles= Article::all();
         $article_categories= ArticleCategory::all();
-        return view(‘article_categories.index’,['article_categories'=>$article_categories],['article_images' => $article_images],['articles' => $articles]);
+        return view('article_categories.index',['article_categories'=>$article_categories],['article_images' => $article_images],['articles' => $articles]);
 
     }
 
