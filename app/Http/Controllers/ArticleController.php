@@ -70,7 +70,7 @@ class ArticleController extends Controller
         $article->excerpt = $request->article_excerpt;
         $article->description = $request->article_description;
         $article->author = $request->article_author;
-        $article->category_id = $request->article_category_id;
+        $article->article_category_id = $request->article_category_id;
         
         $article->save();
 
@@ -120,7 +120,7 @@ class ArticleController extends Controller
         $article->excerpt = $request->article_excerpt;
         $article->description = $request->article_description;
         $article->author = $request->article_author;
-        $article->category_id = $request->article_category_id;
+        $article->article_category_id = $request->article_category_id;
 
         $article->save();//UPDATE
 

@@ -2,48 +2,43 @@
 
 @section ('content')
 
+
 <div id="mySidenav" class="sidenav">
-<a href="{{route('welcome')}}" id="welcome">Main</a>
-<a href="{{route('student.index')}}" id="student">Students</a>
-  <a href="{{route('student.create')}}" id="create_student">Add student</a>
-  <a href="{{route('attendance_group.index')}}" id="attendance_group">Attendance Groups</a>
-  <a href="{{route('attendance_group.create')}}" id="create_attendance_group">Add Attendance Group</a>
-  <a href="{{route('school.index')}}" id="school">Schools</a>
-  <a href="{{route('school.create')}}" id="create_school">Add School</a>
+<a href="{{route('home')}}" id="welcome">Main</a>
+<a href="{{route('article.index')}}" id="article">Articles</a>
+  <a href="{{route('article.create')}}" id="create_article">Add article</a>
+  <a href="{{route('article_category.index')}}" id="article_category">Article categories</a>
+  <a href="{{route('article_category.create')}}" id="create_article_category">Add article categories</a>
+
 </div>
     <div class="container">
-    <p><h1 style="text-align:center; font-size:50px; color:gold">Edit data of </h1><h1 style="text-align:center; font-size:50px; color:black">{{$student->name}} {{$student->surname}}</h1><p>
+    <p><h1 style="text-align:center; font-size:50px; color:gold">Edit data of </h1><h1 style="text-align:center; font-size:50px; color:black">{{$article->title}}</h1><p>
 
-    <form method='POST' action='{{route('student.update', [$student])}}' >
+    <form method='POST' action='{{route('article.update', [$article])}}' >
         <p>
-        Name: <input class="form-control" type='text' name="student_name" value='{{$student->name}}'/>
+        Title: <input class="form-control" type='text' name="article_title" value='{{$article->title}}'/>
         <p>
-        Surname: <input class="form-control" type='text' name="student_surname" value='{{$student->surname}}'/>
+        Excerpt: <input class="form-control" type='text' name="article_excerpt" value='{{$article->excerpt}}'/>
         <p>
-        Attendance Group name: 
-         <select class="form-control" name="student_group_id" value=''>
-                     <!--<option class="text-secondary" value="{{$student->group_id}}">
-                        {{$student->group_id}}</option>; 
-                     @for ($i = 1; $i < 10; $i++)
-                        <option value="{{ $i }}">{{$i}}</option> 
-                     @endfor-->
-                     @foreach ($attendance_groups as $value)
-                      @if ($value->id == $student->group_id)
-                        <option value="{{$value->id}}" selected>{{$value->attendanceGroupSchool->name}}: {{$value->name}}</option>
+        Description: <input class="form-control" type='text' name="article_description" value='{{$article->description}}'/>
+        <p>
+        Author: <input class="form-control" type='text' name="article_author" value='{{$article->author}}'/>
+        <p>
+        Article category ID: 
+         <select class="form-control" name="article_category_id" value=''>
+                     @foreach ($article_categories as $value)
+                      @if ($value->id == $article->article_category_id)
+                        <option value="{{$value->id}}" selected>{{$value->title}}</option>
                       @else
-                        <option value="{{$value->id}}">{{$value->attendanceGroupSchool->name}}: {{$value->name}}</option>
+                        <option value="{{$value->id}}">{{$value->title}}</option>
                       @endif
                     @endforeach   
                      
         </select>
-        
-        <p>          
-        Image address (url): 
-        <input class="form-control" type='text' name="student_image_url" value='{{$student->image_url}}'/>
         @csrf
         <p>
         <button class="btn btn-primary" style="width:100px" type='submit'>Update</button>
-        <a class="btn btn-secondary" style="width:100px"  href="{{route('student.index')}}">Back</a>
+        <a class="btn btn-secondary" style="width:100px"  href="{{route('article.index')}}">Back</a>
     </form> 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

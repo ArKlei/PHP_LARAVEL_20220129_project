@@ -37,7 +37,7 @@
         <td>{{$article->excerpt}}</td>
         <td>{{$article->description}}</td>
         <td>{{$article->author}}</td>
-        <td>{{$article->category_id}}</td>
+        <td>{{$article->article_category_id}}</td>
         <td>
             <a class="btn btn-primary" style="width:100px" href="{{route('article.edit', [$article])}}">Edit</a><p>
             <p><a class="btn btn-secondary" style="width:100px" href="{{route('article.show', [$article])}}">Show</a>
