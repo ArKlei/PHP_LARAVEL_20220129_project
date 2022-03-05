@@ -3,7 +3,15 @@
 
 @section ('content')
 
-
+<div id="mySidenav" class="sidenav">
+<a href="{{route('welcome')}}" id="welcome">Main</a>
+<a href="{{route('student.index')}}" id="student">Students</a>
+  <a href="{{route('student.create')}}" id="create_student">Add student</a>
+  <a href="{{route('attendance_group.index')}}" id="attendance_group">Attendance Groups</a>
+  <a href="{{route('attendance_group.create')}}" id="create_attendance_group">Add Attendance Group</a>
+  <a href="{{route('school.index')}}" id="school">Schools</a>
+  <a href="{{route('school.create')}}" id="create_school">Add School</a>
+</div>
 
     <div class="container">
 

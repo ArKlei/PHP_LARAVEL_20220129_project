@@ -13,12 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-        return view('welcome');
-    });
-    
-Auth::routes();
-    
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+        return view('home');
+      })->name('home');
 
 
 
@@ -73,4 +69,10 @@ Route::prefix('article_categories')->group(function() {
         Route::get('show/{article_category}', 'App\Http\Controllers\ArticleCategoryController@show')->name('article_category.show');
   
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 

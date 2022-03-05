@@ -37,23 +37,28 @@
   left: 0;
 }
 
-#article {
+#welcome {
   top: 120px;
+  background-color: gold;
+}
+
+#article {
+  top: 180px;
   background-color: #04AA6D;
 }
 
 #create_article {
-  top: 180px;
+  top: 240px;
   background-color: #2196F3;
 }
 
 #article_category {
-  top: 240px;
+  top: 300px;
   background-color: #f44336;
 }
 
 #create_article_category {
-  top: 300px;
+  top: 360px;
   background-color: #04AA6D;
 }
 
