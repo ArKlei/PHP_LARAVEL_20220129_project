@@ -74,14 +74,14 @@ class ArticleCategoryController extends Controller
     public function show(ArticleCategory $article_category)
     {
        
-        $article_images_count = 0;
-        $articles= $article_category->articleCategoryArticles; //0,1 ir daugiau
-        foreach ($articles as $article)
-        {
-            $article_images_count += count($article->articleArticleImages);
-        }
+        //$article_images_count = 0;
+        //$articles= $article_category->articleCategoryArticles; //0,1 ir daugiau
+        //foreach ($articles as $article)
+       // {
+           // $article_images_count += count($article->articleArticleImages);
+        //}
         // $article_images= ArticleImage::all();
-        return view('article_categories.show', ['article_category' => $article_category,'articles' => $articles, 'article_images_count'=> $article_images_count]);
+        return view('article_categories.show', ['article_category' => $article_category]);//,'articles' => $articles, 'article_images_count'=> $article_images_count]);
     }
 
     /**
@@ -122,7 +122,7 @@ class ArticleCategoryController extends Controller
     {
         $articles= $article_category->article_categoryArticles; //visus straipsnius, kurie priklauso kategorijai
 
-        if(count($articles) != 0) {
+       if(count($articles) != 0) {
             return redirect()->route('article_category.index')->with('error_message','Delete is not possible because Article Category has articles');
         }
 

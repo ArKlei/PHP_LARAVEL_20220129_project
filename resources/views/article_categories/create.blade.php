@@ -25,7 +25,6 @@
             <p>
             <input  class="form-control" type='text' name="article_author" placeholder="Article author"/>
             <p>
-            Article category:<br>
             <select class="form-control" name="article_category_id" value=''>
                     @foreach ($article_categories as $value)
                       <option value="{{$value->id}}">{{$value->id}}</option>
