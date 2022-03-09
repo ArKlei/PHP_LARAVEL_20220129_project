@@ -3,12 +3,13 @@
 @section ('content')
 
 <div id="mySidenav" class="sidenav">
-<a href="{{route('student.index')}}" id="student">Students</a>
-  <a href="{{route('student.create')}}" id="create_student">Add student</a>
-  <a href="{{route('attendance_group.index')}}" id="attendance_group">Attendance Groups</a>
-  <a href="{{route('attendance_group.create')}}" id="create_attendance_group">Add Attendance Group</a>
-  <a href="{{route('school.index')}}" id="school">Schools</a>
-  <a href="{{route('school.create')}}" id="create_school">Add School</a>
+<a href="{{route('home')}}" id="welcome">Main</a>
+<a href="{{route('article.index')}}" id="article">Articles</a>
+  <a href="{{route('article.create')}}" id="create_article">Add article</a>
+  <a href="{{route('article_category.index')}}" id="article_category">Article categories</a>
+  <a href="{{route('article_category.create')}}" id="create_article_category">Add article categories</a>
+  <a href="{{route('article_image.index')}}" id="article_image">Article images</a>
+  <a href="{{route('article_image.create')}}" id="create_article_image">Add article image</a>
 </div>
     <div class="container">
     <p><h1 style="text-align:center; font-size:50px; color:gold">Edit data of </h1><h1 style="text-align:center; font-size:50px; color:black">{{$student->name}} {{$student->surname}}</h1><p>

@@ -9,6 +9,8 @@
   <a href="{{route('article.create')}}" id="create_article">Add article</a>
   <a href="{{route('article_category.index')}}" id="article_category">Article categories</a>
   <a href="{{route('article_category.create')}}" id="create_article_category">Add article categories</a>
+  <a href="{{route('article_image.index')}}" id="article_image">Article images</a>
+  <a href="{{route('article_image.create')}}" id="create_article_image">Add article image</a>
 
 </div>
     <div class="container">

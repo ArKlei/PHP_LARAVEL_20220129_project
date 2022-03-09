@@ -9,6 +9,8 @@
   <a href="{{route('article.create')}}" id="create_article">Add article</a>
   <a href="{{route('article_category.index')}}" id="article_category">Article categories</a>
   <a href="{{route('article_category.create')}}" id="create_article_category">Add article categories</a>
+  <a href="{{route('article_image.index')}}" id="article_image">Article images</a>
+  <a href="{{route('article_image.create')}}" id="create_article_image">Add article image</a>
   
 </div>
 
@@ -25,15 +27,21 @@
             <p>
             <input  class="form-control" type='text' name="article_author" placeholder="Article author"/>
             <p>
-            Article category:<br>
             <select class="form-control" name="article_category_id" value=''>
                     @foreach ($article_categories as $value)
-                      <option value="{{$value->id}}">{{$value->id}}</option>
+                      <option value="{{$value->id}}">Article category: {{$value->id}}</option>
                     @endforeach   
-                     
-        </select>
+            </select>
+            <p>
+                <select class="form-control" name="image_id" value=''>
+                        @foreach ($article_categories as $value)
+                          <option value="{{$value->id}}">Article category: {{$value->id}}</option>
+                        @endforeach   
+                        
+            </select>
             @csrf
             <p>
+
             <button class="btn btn-primary" style="width:100px" type='submit'>Add</button>
         
             <a class="btn btn-secondary" style="width:100px" href="{{route('article.index')}}">Back</a>

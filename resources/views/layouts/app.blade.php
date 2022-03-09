@@ -62,6 +62,16 @@
   background-color: #04AA6D;
 }
 
+#article_image {
+  top: 420px;
+  background-color: #2196F3;
+}
+
+#create_article_image {
+  top: 480px;
+  background-color: #f44336;
+}
+
 </style>
 </head>
 <body>
