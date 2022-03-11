@@ -71,7 +71,7 @@ class ArticleImageController extends Controller
         $article_image->width = $request->article_image_width;
         $article_image->height = $request->article_image_height;
         $article_image->class = $request->article_image_class;
-        $article_image->article_id = $request->article_image_article_id;
+        $article_image->article_id = $request->article_id;
         
         $article_image->save();
 
@@ -84,9 +84,10 @@ class ArticleImageController extends Controller
      * @param  \App\Models\ArticleImage  $articleImage
      * @return \Illuminate\Http\Response
      */
-    public function show(ArticleImage $articleImage)
+    public function show(ArticleImage $article_image)
     {
-        return view('article_images.show', ['article_image'=> $article_image]);
+        $article_images = ArticleImage::all();
+        return view('article_images.show', ['article_image'=> $article_image], ['article_images'=> $article_images]);
     }
 
     /**
@@ -95,11 +96,11 @@ class ArticleImageController extends Controller
      * @param  \App\Models\ArticleImage  $articleImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(ArticleImage $articleImage)
+    public function edit(ArticleImage $article_image)
     {
-        $article_categories= ArticleCategory::all();
+        
         $articles = Article::all();
-        return view('article_images.edit',['article_image' => $article_image],['article_categories' => $article_categories],['articles' => $articles]);
+        return view('article_images.edit',['article_image' => $article_image],['articles' => $articles]);
     }
 
     /**
@@ -109,7 +110,7 @@ class ArticleImageController extends Controller
      * @param  \App\Models\ArticleImage  $articleImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ArticleImage $articleImage)
+    public function update(Request $request, ArticleImage $article_image)
     {
 
         $article_image->alt = $request->article_image_alt;
@@ -117,7 +118,7 @@ class ArticleImageController extends Controller
         $article_image->width = $request->article_image_width;
         $article_image->height = $request->article_image_height;
         $article_image->class = $request->article_image_class;
-        $article_image->article_id = $request->article_image_article_id;
+        $article_image->article_id = $request->article_id;
         
         $article_image->save();
 

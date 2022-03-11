@@ -11,42 +11,125 @@
   <a href="{{route('article_image.index')}}" id="article_image">Article images</a>
   <a href="{{route('article_image.create')}}" id="create_article_image">Add article image</a>
 </div>
-    <div class="container">
-    <p><h1 style="text-align:center; font-size:50px; color:gold">Edit data of </h1><h1 style="text-align:center; font-size:50px; color:black">{{$student->name}} {{$student->surname}}</h1><p>
 
-    <form method='POST' action='{{route('student.update', [$student])}}' >
-        <p>
-        Name: <input class="form-control" type='text' name="student_name" value='{{$student->name}}'/>
-        <p>
-        Surname: <input class="form-control" type='text' name="student_surname" value='{{$student->surname}}'/>
-        <p>
-        Attendance Group name: 
-         <select class="form-control" name="student_group_id" value=''>
-                     <!--<option class="text-secondary" value="{{$student->group_id}}">
-                        {{$student->group_id}}</option>; 
-                     @for ($i = 1; $i < 10; $i++)
-                        <option value="{{ $i }}">{{$i}}</option> 
-                     @endfor-->
-                     @foreach ($attendance_groups as $value)
-                      @if ($value->id == $student->group_id)
-                        <option value="{{$value->id}}" selected>{{$value->attendanceGroupSchool->name}}: {{$value->name}}</option>
-                      @else
-                        <option value="{{$value->id}}">{{$value->attendanceGroupSchool->name}}: {{$value->name}}</option>
-                      @endif
-                    @endforeach   
-                     
-        </select>
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+
+    <div class="card">
+
+        <div class="container-fluid">
+
+          <div class="card-header" style="margin-top:20px">
+
+            <p><h4 style="text-align:center; color:gold">Edit data of </h4><h4 style="text-align:center; color:black">image ID - {{$article_image->id}}, title - {{$article_image->alt}}</h4><p>
+
+          </div>
+
+          <div class="card-body">
+
+            <div class="row mb-3">
+
+            <form method='POST' ectype="multipart/form-data" action='{{route('article_image.update', [$article_image])}}' >
+             @csrf
+            
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Image name</label>
+                      
+              <div class="col-md-6">
+            
+                <input id="image_alt" class="form-control" type='text' name="image_alt" value="{{$article_image->alt}}" required autofocus />
+                
+              </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Choose image</label>
+                    
+                <div class="col-md-6">
+              
+                  <input id="image_src" class="form-control" type='file' name="image_src" value="{{$article_image->src}}" required autofocus />
+                
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Image width</label>
+                    
+                <div class="col-md-6">
+            
+                  <input id="image_width" class="form-control" type='number' min="0" max="200" name="image_width" value="{{$article_image->width}}" required autofocus />
+                
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Image height</label>
+                    
+                <div class="col-md-6">
+            
+                  <input id="image_height" class="form-control" type='number' min="0" max="200" name="image_height" value="{{$article_image->height}}" required autofocus />
+                
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Image class</label>
+                    
+                <div class="col-md-6">
+            
+                  <input id="image_class" class="form-control" type='text' name="image_class" value="{{$article_image->class}}" required autofocus />
+                
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                    
+              <label for="email" class="col-md-4 col-form-label text-md-end">Article ID</label>
+                    
+                <div class="col-md-6">
+                  
+                    <select class="form-control" name="article_id" value="{{$article_image->article_id}}">
+                            @foreach ($articles as $value)
+                              <option value="{{$value->id}}">{{$value->id}}</option>
+                            @endforeach   
+                    </select>
+                    <p><p>
+                    @csrf
+                    <p>
+                    <button class="btn btn-primary" style="width:100px" type='submit'>Update</button>
         
-        <p>          
-        Image address (url): 
-        <input class="form-control" type='text' name="student_image_url" value='{{$student->image_url}}'/>
-        @csrf
-        <p>
-        <button class="btn btn-primary" style="width:100px" type='submit'>Update</button>
-        <a class="btn btn-secondary" style="width:100px"  href="{{route('student.index')}}">Back</a>
-    </form> 
+                    <a class="btn btn-secondary" style="width:100px" href="{{route('article_image.index')}}">Back</a>
+   
+                </div>
+                
+            </div>
+    
+            </form>
+          
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>

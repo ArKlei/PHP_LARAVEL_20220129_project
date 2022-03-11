@@ -12,54 +12,72 @@
   <a href="{{route('article_image.create')}}" id="create_article_image">Add article image</a>
 </div>
 
+<div class="row justify-content-center">
 
-    <div class="container">
-    <p><h1 style="text-align:center; font-size:50px; color:gold">Present students in all groups and schools</h1><p>
+    <div class="col-md-8">
 
+        <div class="card">
 
-@if (count($students) == 0)
-    <p>There is no students in the database yet</p>
-@endif
+            <div class="container-fluid">
 
-<table class="table table-striped">
-<tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <!--<th>Group ID</th>-->
-    <th>Group Name</th>
-    <th>School Name</th>
-    <th>Image address (url)</th>
-</tr>
+                <div class="card-header" style="margin-top:20px">
+        
+                    <p><h4 style="text-align:center; color:gold">Present images of all articles</h4><p>
 
+                        @if (count($article_images) == 0)
+                            <p>There is no article images in the database yet</p>
+                        @endif
+                
+                </div>
 
-@foreach ($students as $student)
-    <tr>
-        <td>{{$student->id}}</td>
-        <td>{{$student->name}}</td>
-        <td>{{$student->surname}}</td>
-        <!--<td>{{$student->group_id}}</td>-->
-        <td>{{$student->studentAttendanceGroup->name}}</td>
-        <td>{{$student->studentAttendanceGroup->attendanceGroupSchool->name}}</td>
-        <td>{{$student->image_url}}</td>
-        <td>
-            <a class="btn btn-primary" style="width:100px" href="{{route('student.edit', [$student])}}">Edit</a><p>
-            <p><a class="btn btn-secondary" style="width:100px" href="{{route('student.show', [$student])}}">Show</a>
-<p>
-            <form method="post" action='{{route('student.destroy', [$student])}}'>
-                @csrf
-                <button class="btn btn-danger" style="width:100px" type="submit">Delete</button>
-            </form>
-        </td>
-    </tr>
-@endforeach
-</table>
+                <div class="card-body">
+
+                    <div class="row mb-3">
+
+                        <table class="table table-striped">
+                        
+                            <tr>
+                                <th>Article id</th>    
+                                <th>Article title</th>
+                                <th>Image name</th>
+                            </tr>
 
 
-{{-- create forma - mums reikia nuorodos ar mygtuko --}}
-<a class="btn btn-primary" href="{{route('student.create')}}">Include new student's data into database</a>
-<p>
+                            @foreach ($article_images as $article_image)
+                                <tr>
+                                    <td>{{$article_image->article_id}}</td>
+                                    <td>{{$article_image->articleImageArticle->title}}</td>
+                                    <td><img src="{{$article_image->src}}" alt="{{$article_image->alt}}" width="{{$article_image->width}}" height="{{$article_image->height}}"></td>
+                                    
+                                    <td>
+                                        <a class="btn btn-primary" style="width:100px" href="{{route('article_image.edit', [$article_image])}}">Edit</a><p>
+                                        <p><a class="btn btn-secondary" style="width:100px" href="{{route('article_image.show', [$article_image])}}">Show</a>
+                            <p>
+                                        <form method="post" action='{{route('article_image.destroy', [$article_image])}}'>
+                                            @csrf
+                                            <button class="btn btn-danger" style="width:100px" type="submit">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </table>
+
+                            {{-- create forma - mums reikia nuorodos ar mygtuko --}}
+                            <a class="btn btn-primary" href="{{route('article_image.create')}}">Include new article image data into database</a>
+                            <p>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

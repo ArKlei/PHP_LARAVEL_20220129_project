@@ -14,32 +14,66 @@
   
 </div>
 
-    <div class="container">
-        <p><h1 style="text-align:center; font-size:50px; color:gold">Add article</h1><p>
+<div class="row justify-content-center">
 
-        <form method='POST' action='{{route('article.store')}}'>
-            <p>
-            <input class="form-control" type='text' name="article_title" placeholder="Article title"/>
-            <p>
-            <input  class="form-control" type='text' name="article_excerpt" placeholder="Article excerpt"/>
-            <p>
-            <input  class="form-control" type='text' name="article_description" placeholder="Article description"/>
-            <p>
-            <input  class="form-control" type='text' name="article_author" placeholder="Article author"/>
-            <p>
-            <select class="form-control" name="article_category_id" value=''>
-                    @foreach ($article_categories as $value)
-                      <option value="{{$value->id}}">{{$value->id}}</option>
-                    @endforeach   
-                     
-        </select>
-            @csrf
-            <p>
-            <button class="btn btn-primary" style="width:100px" type='submit'>Add</button>
-        
-            <a class="btn btn-secondary" style="width:100px" href="{{route('article.index')}}">Back</a>
-        </form>
+<div class="col-md-8">
+
+    <div class="card">
+
+        <div class="container-fluid">
+
+          <div class="card-header" style="margin-top:20px">
+
+                <p><h4 style="text-align:center; color:gold">Add article category</h4><p>
+            
+              </div>
+
+            <div class="card-body">
+
+              <div class="row mb-3">
+
+                <form method='POST' action='{{route('article_category.store')}}'>
+
+                <div class="row mb-3">
+                    
+                  <label for="email" class="col-md-4 col-form-label text-md-end">Article category title</label>
+                    
+                  <div class="col-md-6">
+                    
+                    <input class="form-control" type='text' name="article_category_title" placeholder=""/>
+                    
+                  </div>
+                
+                </div>
+
+                <div class="row mb-3">
+                    
+                  <label for="email" class="col-md-4 col-form-label text-md-end">Article category description</label>
+                    
+                  <div class="col-md-6">
+
+                    <input  class="form-control" type='text' name="article_category_description" placeholder=""/>
+                  
+                  
+                    @csrf
+                    <p><p>
+                    <button class="btn btn-primary" style="width:100px" type='submit'>Add</button>
+                
+                    <a class="btn btn-secondary" style="width:100px" href="{{route('article.index')}}">Back</a>
+
+                  </div>
+                
+                </div>
+              
+                </form>
+              
+            </div>
+            
+        </div>
+          
     </div>
+        
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
            
 </body>
