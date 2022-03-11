@@ -67,7 +67,11 @@ class ArticleImageController extends Controller
         $article_image = new ArticleImage;
 
         $article_image->alt = $request->article_image_alt;
-        $article_image->src = $request->article_image_src;
+
+        $imageName = 'image'.time().'.'.$request->image_src->extension();
+        $request->image_src->move(public_path('images'), $imageName);
+        $article_image->src = $imageName;
+
         $article_image->width = $request->article_image_width;
         $article_image->height = $request->article_image_height;
         $article_image->class = $request->article_image_class;

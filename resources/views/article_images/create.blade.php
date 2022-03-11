@@ -38,7 +38,7 @@
             
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image name</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Image name</label>
                       
               <div class="col-md-6">
             
@@ -50,7 +50,7 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Choose image</label>
+              <label for="file" class="col-md-4 col-form-label text-md-end">Choose image</label>
                     
                 <div class="col-md-6">
               
@@ -62,7 +62,7 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image width</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Image width</label>
                     
                 <div class="col-md-6">
             
@@ -74,7 +74,7 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image height</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Image height</label>
                     
                 <div class="col-md-6">
             
@@ -86,7 +86,7 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image class</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Image class</label>
                     
                 <div class="col-md-6">
             
@@ -98,7 +98,7 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article ID</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Article ID</label>
                     
                 <div class="col-md-6">
                   
