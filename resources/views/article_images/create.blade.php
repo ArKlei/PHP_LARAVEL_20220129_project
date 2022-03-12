@@ -31,9 +31,9 @@
 
           <div class="card-body">
 
-            <div class="row mb-3">
+            
 
-            <form method='POST' ectype="multipart/form-data" action='{{route('article_image.store')}}'>
+            <form method='POST' enctype="multipart/form-data" action='{{route('article_image.store')}}'>
              @csrf
             
             <div class="row mb-3">
@@ -42,7 +42,7 @@
                       
               <div class="col-md-6">
             
-                <input id="image_alt" class="form-control" type='text' name="image_alt" placeholder="" required autofocus />
+                <input id="article_image_alt" class="form-control" type='text' name="article_image_alt" placeholder="" required autofocus />
                 
               </div>
                 
@@ -54,7 +54,7 @@
                     
                 <div class="col-md-6">
               
-                  <input id="image_src" class="form-control" type='file' name="image_src" placeholder="" required autofocus />
+                  <input id="image_src" class="form-control" type='file' name="article_image_src" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -66,7 +66,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_width" class="form-control" type='number' min="0" max="200" name="image_width" placeholder="" required autofocus />
+                  <input id="image_width" class="form-control" type='number' min="0" max="200" name="article_image_width" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -78,7 +78,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_height" class="form-control" type='number' min="0" max="200" name="image_height" placeholder="" required autofocus />
+                  <input id="image_height" class="form-control" type='number' min="0" max="200" name="article_image_height" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -90,7 +90,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_class" class="form-control" type='text' name="image_class" placeholder="" required autofocus />
+                  <input id="image_class" class="form-control" type='text' name="article_image_class" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -102,7 +102,7 @@
                     
                 <div class="col-md-6">
                   
-                    <select class="form-control" name="article_id" value=''>
+                    <select class="form-control" name="article_image_article_id" value=''>
                             @foreach ($articles as $value)
                               <option value="{{$value->id}}">Article ID: {{$value->id}}</option>
                             @endforeach   
