@@ -30,16 +30,16 @@
 
             <div class="row mb-3">
 
-            <form method='POST' ectype="multipart/form-data" action='{{route('article_image.update', [$article_image])}}' >
+            <form method='POST' enctype="multipart/form-data" action='{{route('article_image.update', [$article_image])}}' >
              @csrf
             
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image name</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Image name</label>
                       
               <div class="col-md-6">
             
-                <input id="image_alt" class="form-control" type='text' name="image_alt" value="{{$article_image->alt}}" required autofocus />
+                <input id="article_image_alt" class="form-control" type='text' name="article_image_alt" value="{{$article_image->alt}}" required autofocus />
                 
               </div>
                 
@@ -47,11 +47,11 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Choose image</label>
+              <label for="file" class="col-md-4 col-form-label text-md-end">Choose image</label>
                     
                 <div class="col-md-6">
               
-                  <input id="image_src" class="form-control" type='file' name="image_src" value="{{$article_image->src}}" required autofocus />
+                  <input id="article_image_src" class="form-control" type='file' name="article_image_src" autofocus />
                 
                 </div>
                 
@@ -59,11 +59,11 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image width</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Image width</label>
                     
                 <div class="col-md-6">
             
-                  <input id="image_width" class="form-control" type='number' min="0" max="200" name="image_width" value="{{$article_image->width}}" required autofocus />
+                  <input id="article_image_width" class="form-control" type='number' min="0" max="200" name="article_image_width" value="{{$article_image->width}}" required autofocus />
                 
                 </div>
                 
@@ -71,11 +71,11 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image height</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Image height</label>
                     
                 <div class="col-md-6">
             
-                  <input id="image_height" class="form-control" type='number' min="0" max="200" name="image_height" value="{{$article_image->height}}" required autofocus />
+                  <input id="article_image_height" class="form-control" type='number' min="0" max="200" name="article_image_height" value="{{$article_image->height}}" required autofocus />
                 
                 </div>
                 
@@ -83,11 +83,11 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image class</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Image class</label>
                     
                 <div class="col-md-6">
             
-                  <input id="image_class" class="form-control" type='text' name="image_class" value="{{$article_image->class}}" required autofocus />
+                  <input id="article_image_class" class="form-control" type='text' name="article_image_class" value="{{$article_image->class}}" required autofocus />
                 
                 </div>
                 
@@ -95,11 +95,11 @@
 
             <div class="row mb-3">
                     
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article ID</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Article ID</label>
                     
                 <div class="col-md-6">
                   
-                    <select class="form-control" name="article_id" value="{{$article_image->article_id}}">
+                    <select class="form-control" name="article_image_article_id" value="">
                             @foreach ($articles as $value)
                               <option value="{{$value->id}}">{{$value->id}}</option>
                             @endforeach   

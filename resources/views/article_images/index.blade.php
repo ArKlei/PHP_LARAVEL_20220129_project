@@ -47,7 +47,7 @@
                                 <tr>
                                     <td>{{$article_image->article_id}}</td>
                                     <td>{{$article_image->articleImageArticle->title}}</td>
-                                    <td><img src="{{$article_image->src}}" alt="{{$article_image->alt}}" width="{{$article_image->width}}" height="{{$article_image->height}}"></td>
+                                    <td><img src="{{asset('/images/'.$article_image->src)}}" alt="{{$article_image->alt}}" width="{{$article_image->width}}" height="{{$article_image->height}}"></td>
                                     
                                     <td>
                                         <a class="btn btn-primary" style="width:100px" href="{{route('article_image.edit', [$article_image])}}">Edit</a><p>

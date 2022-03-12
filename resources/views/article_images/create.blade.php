@@ -54,7 +54,7 @@
                     
                 <div class="col-md-6">
               
-                  <input id="image_src" class="form-control" type='file' name="article_image_src" placeholder="" required autofocus />
+                  <input id="article_image_src" class="form-control" type='file' name="article_image_src" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -66,7 +66,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_width" class="form-control" type='number' min="0" max="200" name="article_image_width" placeholder="" required autofocus />
+                  <input id="article_image_width" class="form-control" type='number' min="0" max="200" name="article_image_width" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -78,7 +78,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_height" class="form-control" type='number' min="0" max="200" name="article_image_height" placeholder="" required autofocus />
+                  <input id="article_image_height" class="form-control" type='number' min="0" max="200" name="article_image_height" placeholder="" required autofocus />
                 
                 </div>
                 
@@ -90,7 +90,7 @@
                     
                 <div class="col-md-6">
             
-                  <input id="image_class" class="form-control" type='text' name="article_image_class" placeholder="" required autofocus />
+                  <input id="article_image_class" class="form-control" type='text' name="article_image_class" placeholder="" required autofocus />
                 
                 </div>
                 
