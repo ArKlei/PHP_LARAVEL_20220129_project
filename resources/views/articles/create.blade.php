@@ -36,7 +36,7 @@
           
             <div class="row mb-3">
                         
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article title</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Article title</label>
                                           
                 <div class="col-md-6">
                 
@@ -48,7 +48,7 @@
           
             <div class="row mb-3">
                         
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article excerpt</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Article excerpt</label>
                                           
                 <div class="col-md-6">   
               
@@ -60,7 +60,7 @@
           
             <div class="row mb-3">
                         
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article description</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Article description</label>
                                           
                 <div class="col-md-6">   
               
@@ -72,7 +72,7 @@
           
             <div class="row mb-3">
                         
-              <label for="email" class="col-md-4 col-form-label text-md-end">Article author</label>
+              <label for="text" class="col-md-4 col-form-label text-md-end">Article author</label>
                                           
                 <div class="col-md-6">   
               
@@ -84,7 +84,7 @@
           
             <div class="row mb-3">
                         
-              <label for="email" class="col-md-4 col-form-label text-md-end">Image ID</label>
+              <label for="number" class="col-md-4 col-form-label text-md-end">Image ID</label>
                                           
                 <div class="col-md-6">   
               

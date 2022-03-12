@@ -36,7 +36,7 @@
 
                 <div class="row mb-3">
                     
-                  <label for="email" class="col-md-4 col-form-label text-md-end">Article category title</label>
+                  <label for="text" class="col-md-4 col-form-label text-md-end">Article category title</label>
                     
                   <div class="col-md-6">
                     
@@ -48,7 +48,7 @@
 
                 <div class="row mb-3">
                     
-                  <label for="email" class="col-md-4 col-form-label text-md-end">Article category description</label>
+                  <label for="text" class="col-md-4 col-form-label text-md-end">Article category description</label>
                     
                   <div class="col-md-6">
 
